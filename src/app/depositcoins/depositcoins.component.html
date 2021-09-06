@@ -1,0 +1,22 @@
+<div>
+<h4 class="">We accept Nickel,Dime and Quarter</h4>
+</div>
+
+<div>
+<label id="example-radio-group-label">Choose coin to deposit</label>
+
+<mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="depositedamount" (change)="setdeposit(depositedamount)">
+  <mat-radio-button class="example-radio-button" *ngFor="let dataitem of CoinsList" [value]="dataitem.coinvalue">
+    {{dataitem.coinDescription}} ({{dataitem.coinvalue}} cents)
+  </mat-radio-button>
+</mat-radio-group>
+
+<div>Your deposited amount(cents): {{depositedamount}}</div>
+
+</div>
+
+<br>
+<div *ngIf="displayOrder">
+    <app-orderitems [totaldepositedamount]="totaldepositedamount"></app-orderitems>  
+
+</div>

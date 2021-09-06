@@ -1,0 +1,17 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of ProductsList">
+            <td>{{dataItem.item}}</td>
+            <td>{{dataItem.description}}</td>
+            <td>{{dataItem.cost}}</td>           
+        </tr>
+    </tbody>
+</table>
+
